@@ -1,18 +1,19 @@
 /*!=======================================================================================
- * Greyforest Background Videos v1.0.0
+ * Greyforest Background Videos v1.0.1
  * Lazy-loading + auto-playing (muted) videos that fill the background of their container
  * https://www.greyforest.media/plugins
  * https://github.com/GreyforestMedia
  * ___ License
  * by Greyforest Media
  */
- function gfBackgroundVideos( element ){
+
+function gfBackgroundVideos( element ){
 
 	var bgVideoCSS = '<style>'+ 
 	element +' {position:relative;overflow:hidden;background-size:cover;background-position:center center;background-repeat:no-repeat;}' +
 	element +' .bg-video-glass {position:absolute;height:100%;width:100%;z-index:2;top:0;left:0;margin:0;padding:0;}' +
 	element +' .bg-video-wrapper {position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;margin:0;padding:0;}' +
-	element +' .bg-video-wrapper video {position: absolute; top: 50%; left: 50%;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: 0;transform: translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);margin:0;padding:0;}'+
+	element +' .bg-video-wrapper video {position:absolute;width: 100%; height: 100%; z-index: 0;margin:0;padding:0;object-fit:cover}'+
 	'<style>';
 	
 	// check if element exists
